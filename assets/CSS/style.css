@@ -8,13 +8,9 @@
     margin: 0;
 }
 
-.main{
-    width: 100%;
-}
+
 
 .body{
-    /* display:flex; */
-    height: auto;
     background-color: #122e3f;
 }
 
@@ -111,6 +107,20 @@ font-family: sans-serif;
     border-radius: 50px;
 }
 
+.projectsText-container{
+    display: flex;
+    padding: 20px;
+    align-items: baseline;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.projectsText{
+    font-family: sans-serif;
+    font-size: 18px;
+    color:#122e3f;
+}
 
 .portfolio {
 display: grid;
@@ -202,6 +212,7 @@ border: 1px solid white;
     align-items: center;
     background-color: #122e3f;
     padding: 30px 0px 20px 0px;
+    width: 110%;
 }
 
 .footer-container h4{
@@ -226,17 +237,30 @@ padding-bottom: 46px;
 
 
 @media screen and (max-width: 600px){
-    /* .body{
+    body {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        } */
+        }
     
         .header{
             display: flex;
             flex-wrap: wrap;
-           
-            background-color: #122e3f;
-            width: 100%;
             justify-content: center;
+            padding: 30px;
+            background-color: #122e3f;
+            align-items: center;
+        }
+
+        .about {      
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            background-color: white;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+
         }
     
             .header h1 {
@@ -286,6 +310,10 @@ padding-bottom: 46px;
                 background-color: white;
                 justify-content: center;
             }
+
+            .projectOne h3 {
+                display: none;
+            }
     
             .footer-container h4 {
                 font-size: 24px;
@@ -293,15 +321,13 @@ padding-bottom: 46px;
             }
 }
 
-@media  screen and (max-width: 320px){
+@media  screen and (min-width: 320px){
 
-
-
-    /* body {
+    body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    } */
+    }
 
     .header{
         display: flex;
@@ -362,7 +388,7 @@ padding-bottom: 46px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 5px;
-            padding-right: 36px;
+            padding-right: 52px;
             background-color: white;
             justify-content: center;
         }
@@ -371,10 +397,11 @@ padding-bottom: 46px;
             margin: 0px 0px 0px 68px;
         }
 
-        .password{
-
+        .projectOne h3 {
+            display: none;
         }
 
+      
         .footer-container h4 {
             font-size: 24px;
            
